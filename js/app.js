@@ -50,7 +50,7 @@ function getProfit(){
 
 // calculates profit %
 function getProfitPercentage(profit){
-    return ((profit / initialPrice.value) * 100);
+    return ((profit / (initialPrice.value * stocksQuantity.value)) * 100);
 }
 
 // calculates loss
@@ -60,14 +60,7 @@ function getLoss(){
 
 // calculates loss %
 function getLossPercentage(loss){
-    return ((loss / initialPrice.value) * 100);
+    return ((loss / (initialPrice.value * stocksQuantity.value)) * 100);
 }
-
-
-
-
-
-
-
 
 btn.addEventListener("click", calculateProfitAndLoss);
